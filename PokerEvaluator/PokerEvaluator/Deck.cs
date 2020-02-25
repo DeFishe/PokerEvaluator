@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PokerEvaluator
 {
@@ -16,12 +13,21 @@ namespace PokerEvaluator
             {
                 cards.Add(new Card(deckPosition));
             }
-            //ShuffleDeck();
+            ShuffleDeck();
         }
 
         private void ShuffleDeck()
         {
-            throw new NotImplementedException();
+            Random rand = new Random();
+            Card cardHolder;
+            int randomIndex;
+            for (int i = 0; i < cards.Count; i++)
+            {
+                randomIndex = rand.Next(0, cards.Count - 1);
+                cardHolder = cards[i];
+                cards[i] = cards[randomIndex];
+                cards[randomIndex] = cardHolder;
+            }
         }
     }
 }

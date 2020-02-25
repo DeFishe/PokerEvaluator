@@ -1,6 +1,5 @@
-﻿using System;
-using PokerEvaluator;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 
 namespace PokerEvaluator.UnitTests
 {
@@ -8,7 +7,7 @@ namespace PokerEvaluator.UnitTests
     public class DeckTests
     {
         [TestMethod]
-        public void DeckConstructor_DeckMade_IsEqualtTo52()
+        public void DeckConstructor_DeckMade_IsEqualTo52()
         {
             //arrange
             Deck deck = new Deck();
@@ -273,6 +272,20 @@ namespace PokerEvaluator.UnitTests
             }
             //assert
             Assert.AreEqual(4, kingCount);
+        }
+        [TestMethod]
+        public void DeckShuffle_DefaultShuffle_ShuffledCollectionAndUnshuffledCollectionAreNotEqual()
+        {
+            //arrange
+            Deck sortedDeck = new Deck();
+            List<Card> unsortedDeck = new List<Card>();
+            //act
+            for (int deckPosition = 0; deckPosition < 52; deckPosition++)
+            {
+                unsortedDeck.Add(new Card(deckPosition));
+            }
+            //assert
+            CollectionAssert.AreNotEqual(unsortedDeck, sortedDeck.cards);
         }
     }
 }
