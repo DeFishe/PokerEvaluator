@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace PokerEvaluator
 {
-    class Card
+    public class Card
     {
-        string Suit { get; set; }
-        string Value { get; set; }
+        public string Suit { get; set; }
+        public string Value { get; set; }
         private static List<string> PossibleSuits = new List<string>()
         {
             "Club",
@@ -19,7 +19,7 @@ namespace PokerEvaluator
         };
         private static List<string> PossibleValues = new List<string>()
         {
-            "1","2","3","4","5","6","7","8","10","Jack","Queen","King"
+            "Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"
         };
 
         public Card(int deckPosition)

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace PokerEvaluator
 {
-    class Deck
+    public class Deck
     {
-        List<Card> cards = new List<Card>();
+        public List<Card> cards = new List<Card>();
 
         public Deck()
         {
@@ -16,6 +16,12 @@ namespace PokerEvaluator
             {
                 cards.Add(new Card(deckPosition));
             }
+            //ShuffleDeck();
+        }
+
+        private void ShuffleDeck()
+        {
+            throw new NotImplementedException();
         }
     }
 }
