@@ -16,5 +16,12 @@ namespace PokerEvaluator
         {
             InitializeComponent();
         }
+        private void dealButton_Click(object sender, EventArgs e)
+        {
+            // Dealer dealer = new Dealer(deck);
+            //Hand player1Hand = new Hand(deck);
+            //deck.ShuffleDeck()'
+            //Hand player2Hand = new Hand(deck);
+        }
     }
 }

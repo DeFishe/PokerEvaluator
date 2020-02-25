@@ -9,9 +9,13 @@ namespace PokerEvaluator
 
         public Deck()
         {
-            for (int deckPosition = 0; deckPosition < 52; deckPosition++)
+            int deckPosition = 0;
+            for (int suitPosition = 0; suitPosition < 4; suitPosition++)
             {
-                cards.Add(new Card(deckPosition));
+                for (int valuePosition = 0; valuePosition < 13; valuePosition++)
+                {
+                    cards.Add(new Card(deckPosition++,suitPosition,valuePosition));
+                }
             }
             ShuffleDeck();
         }
