@@ -8,21 +8,21 @@ namespace PokerEvaluator
 {
     public class Card
     {
-        public string Suit { get; set; }
-        public string Value { get; set; }
-        public string Unicode { get; set; }
-        private readonly List<string> PossibleSuits = new List<string>()
+        public string Suit { get; set; } //suit of the card
+        public string Value { get; set; } //value of the card
+        public string Unicode { get; set; } //unicode string used to display the card
+        private readonly List<string> PossibleSuits = new List<string>() //ordered list of suits
         {
             "Spade",
             "Heart",
             "Diamond",
             "Club"
         };
-        private readonly List<string> PossibleValues = new List<string>()
+        private readonly List<string> PossibleValues = new List<string>() //ordered list of values
         {
             "1","2","3","4","5","6","7","8","9","10","11","12","13"
         };
-        private readonly List<string> PossibleUnicode = new List<string>()
+        private readonly List<string> PossibleUnicode = new List<string>() //ordered list of unicode
         {
             "\U0001F0A1","\U0001F0A2","\U0001F0A3","\U0001F0A4","\U0001F0A5","\U0001F0A6","\U0001F0A7","\U0001F0A8","\U0001F0A9","\U0001F0AA","\U0001F0AB","\U0001F0AD","\U0001F0AE",
             "\U0001F0B1","\U0001F0B2","\U0001F0B3","\U0001F0B4","\U0001F0B5","\U0001F0B6","\U0001F0B7","\U0001F0B8","\U0001F0B9","\U0001F0BA","\U0001F0BB","\U0001F0BD","\U0001F0BE",
@@ -32,9 +32,9 @@ namespace PokerEvaluator
 
         public Card(int deckPosition,int suitSelection, int valueSelection)
         {
-            Suit = PossibleSuits.ElementAt(suitSelection);
-            Value = PossibleValues.ElementAt(valueSelection);
-            Unicode = PossibleUnicode.ElementAt(deckPosition);
+            Suit = PossibleSuits.ElementAt(suitSelection); //sets the suit equal to the suit passed in
+            Value = PossibleValues.ElementAt(valueSelection); //sets the value equal to the value passed in
+            Unicode = PossibleUnicode.ElementAt(deckPosition); //sets the unicode equal to the string corresponding to the ordered deck
         }
     }
 }

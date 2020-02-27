@@ -16,23 +16,28 @@ namespace PokerEvaluator
 
         private void dealButton_Click(object sender, EventArgs e)
         {
-            Dealer dealer = new Dealer();
-            p1Hand.Text = "";
-            foreach (Card item in dealer.P1Hand.cards)
+            Dealer dealer = new Dealer(); //sets up a new dealer
+            p1Hand.Text = ""; //resets hand
+            foreach (Card item in dealer.P1Hand.cards) //displays hand
             {
                 p1Hand.Text += item.Unicode;
             }
-            p2Label.Text = "";
-            foreach (Card item in dealer.P2Hand.cards)
+            p2Label.Text = ""; //resets hand
+            foreach (Card item in dealer.P2Hand.cards) //displays hand
             {
                 p2Label.Text += item.Unicode;
             }
-            if (dealer.Evaluate())
+            if (dealer.Evaluate()) //checks winner and displays
             {
                 winnerLabel.Text = "Winner: Player 1";
             }
             else
                 winnerLabel.Text = "Winner: Player 2";
+        }
+
+        private void winnerLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

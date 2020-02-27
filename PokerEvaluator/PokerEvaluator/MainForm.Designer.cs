@@ -100,13 +100,14 @@
             // winnerLabel
             // 
             this.winnerLabel.AutoSize = true;
-            this.winnerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.winnerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.winnerLabel.Location = new System.Drawing.Point(280, 9);
             this.winnerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.winnerLabel.Name = "winnerLabel";
-            this.winnerLabel.Size = new System.Drawing.Size(134, 39);
+            this.winnerLabel.Size = new System.Drawing.Size(141, 39);
             this.winnerLabel.TabIndex = 7;
             this.winnerLabel.Text = "Winner:";
+            this.winnerLabel.Click += new System.EventHandler(this.winnerLabel_Click);
             // 
             // MainForm
             // 
