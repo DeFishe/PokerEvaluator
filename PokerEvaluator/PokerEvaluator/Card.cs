@@ -30,7 +30,7 @@ namespace PokerEvaluator
             "\U0001F0D1","\U0001F0D2","\U0001F0D3","\U0001F0D4","\U0001F0D5","\U0001F0D6","\U0001F0D7","\U0001F0D8","\U0001F0D9","\U0001F0DA","\U0001F0DB","\U0001F0DD","\U0001F0DE"
         };
 
-        public Card(int deckPosition,int suitSelection, int valueSelection)
+        public Card(int deckPosition,int suitSelection, int valueSelection)//Sets together all the attricutes of the Cards
         {
             Suit = PossibleSuits.ElementAt(suitSelection); //sets the suit equal to the suit passed in
             Value = PossibleValues.ElementAt(valueSelection); //sets the value equal to the value passed in
