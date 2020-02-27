@@ -20,7 +20,7 @@ namespace PokerEvaluator
         };
         private readonly List<string> PossibleValues = new List<string>()
         {
-            "Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"
+            "1","2","3","4","5","6","7","8","9","10","11","12","13"
         };
         private readonly List<string> PossibleUnicode = new List<string>()
         {
